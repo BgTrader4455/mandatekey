@@ -1,0 +1,25 @@
+[package]
+name = "mandatekey"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Open spending mandates for AI agents on Solana"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "mandatekey"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = "0.31.1"
+anchor-spl = "0.31.1"
+
+[lints.rust]
+unexpected_cfgs = { level = "allow" }
